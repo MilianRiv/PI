@@ -66,12 +66,13 @@
                     <h3>  <div class="col-md">
                 <!-- Agregar botones para otras tablas -->
                 <div class="table-buttons">
+                <a href="panel_admin.php" class="btn btn-secondary btn-sm">Inicio</a>
                     <a href="categorias.php" class="btn btn-secondary btn-sm">Categorías</a>
                     <a href="personal.php" class="btn btn-secondary btn-sm">Personal</a>
                     <a href="proveedores.php" class="btn btn-secondary btn-sm">Proveedores</a>
                     <a href="usuarios.php" class="btn btn-secondary btn-sm">Usuarios</a>
                 </div>
-            </div>𝑷𝒂𝒈𝒊𝒏𝒃𝒖𝒕𝒕𝒐𝒏𝒊 𝑨𝒅𝒎𝒊𝒏𝒊𝒔𝒕𝒓𝒂𝒄𝒊ó𝒏 𝑴𝒊𝒏𝒊𝒔𝒖𝒑𝒆𝒓 "𝑰𝒔𝒂𝒃𝒆𝒍" <a href="logout.php" class="logout-button"><i class="bi bi-door-open"></i></a></h3>
+            </div> 𝑴𝒊𝒏𝒊𝒔𝒖𝒑𝒆𝒓 "𝑰𝒔𝒂𝒃𝒆𝒍" <a href="logout.php" class="logout-button"><i class="bi bi-door-open"></i></a></h3>
                 </header>
             </div>
         </div>

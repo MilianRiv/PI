@@ -56,6 +56,12 @@ $categorias = $sentencia->fetchAll(PDO::FETCH_OBJ);
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             <?php } ?>
+            <?php if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'productos_asociados') { ?>
+    <div class="alert alert-danger rounded-3 animate__animated animate__fadeInUp" role="alert">
+        <strong>Error!</strong> Tienes productos asociados!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php } ?>
             <!-- fin alerta -->
             <div class="card rounded-3 shadow-lg">
                 <div class="card-header">
