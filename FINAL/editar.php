@@ -1,12 +1,20 @@
-<?php include 'header.php' ?>
-
 <?php
-if (!isset($_GET['codigo_producto'])) {
-    header('Location: index.php?mensaje=error');
+session_start();
+if (!isset($_SESSION['admin'])) {
+    header("Location: login.php"); // Redireccionar si no se ha iniciado sesión
     exit();
 }
+?>
 
-include_once 'conexion.php';
+
+<?php
+include 'header.php';
+?>
+
+
+<?php
+include_once "conexion.php";
+
 $codigo_producto = $_GET['codigo_producto'];
 
 $sentencia = $bd->prepare("select * from productos where codigo_producto = ?;");

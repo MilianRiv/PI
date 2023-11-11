@@ -1,7 +1,19 @@
 <?php
-include 'header.php';
-include_once "conexion.php";
+session_start();
+if (!isset($_SESSION['admin'])) {
+    header("Location: login.php"); // Redireccionar si no se ha iniciado sesión
+    exit();
+}
+?>
 
+
+<?php
+include 'header.php';
+?>
+
+
+<?php
+include_once "conexion.php";
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id_persona'])) {
     // Obtiene el ID del personal a editar
     $id_persona = $_GET['id_persona'];
@@ -97,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_FILES['imagen_personal']) && $_FILES['imagen_personal']['error'] === UPLOAD_ERR_OK) {
         $imagen_personal = $_FILES['imagen_personal']['name'];
         // Guarda la imagen en el directorio deseado (ajusta la ruta según tu estructura)
-        move_uploaded_file($_FILES['imagen_personal']['tmp_name'], 'ruta/del/directorio/' . $imagen_personal);
+        move_uploaded_file($_FILES['imagen_personal']['tmp_name'], '/images' . $imagen_personal);
     } else {
         // Manejar el caso en que no se selecciona ninguna imagen
         $imagen_personal = ''; // O asigna el valor por defecto que desees

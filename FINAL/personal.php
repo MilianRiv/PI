@@ -1,14 +1,18 @@
 <?php
+session_start();
+if (!isset($_SESSION['admin'])) {
+    header("Location: login.php"); // Redireccionar si no se ha iniciado sesión
+    exit();
+}
+?>
+
+
+<?php
 include 'header.php';
 ?>
 
-<?php
-session_start();
-if (!isset($_SESSION['admin'])) {
-    header("Location: login.php");
-    exit();
-}
 
+<?php
 include_once "conexion.php";
 
 // Obtener datos de personal (ajusta la consulta según tu estructura de base de datos)
@@ -166,5 +170,9 @@ if (isset($_GET['mensaje']) && $_GET['mensaje'] == 'editado') {
 </script>
 
 </div>
+
+<br>
+<br>
+<br>
 
 <?php include 'footer.php'; ?>

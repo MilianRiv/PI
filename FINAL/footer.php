@@ -1,4 +1,4 @@
-<footer class="container-fluid bg-light fixed-bottom">
+<footer class="container-expand bg-light fixed-bottom">
         <div class="row">
             <div class="col-md text-dark text-center py-1">
                 Desarrollado DREAM software solutions

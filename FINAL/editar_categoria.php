@@ -1,11 +1,18 @@
 <?php
-include 'header.php';
 session_start();
 if (!isset($_SESSION['admin'])) {
-    header("Location: login.php");
+    header("Location: login.php"); // Redireccionar si no se ha iniciado sesión
     exit();
 }
+?>
 
+
+<?php
+include 'header.php';
+?>
+
+
+<?php
 include_once "conexion.php";
 
 // Obtener el ID de la categoría de la URL

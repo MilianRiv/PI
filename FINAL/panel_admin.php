@@ -1,14 +1,16 @@
 <?php
-include 'header.php';
-?>
-
-<?php
 session_start();
 if (!isset($_SESSION['admin'])) {
     header("Location: login.php"); // Redireccionar si no se ha iniciado sesión
     exit();
 }
 ?>
+
+
+<?php
+include 'header.php';
+?>
+
 
 <?php
 include_once "conexion.php";
@@ -17,6 +19,8 @@ include_once "conexion.php";
 $sentencia = $bd->query("SELECT * FROM productos");
 $productos = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
+
+<br>
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -145,5 +149,9 @@ $(document).ready(function() {
 </script>
 
 </div>
+
+<br>
+<br>
+<br>
 
 <?php include 'footer.php'; ?>
